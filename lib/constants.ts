@@ -113,23 +113,28 @@ export const SERVICES = [
 export const PROCESS = [
   {
     step: 1,
-    title: 'Escuchamos',
-    description: 'Agendamos una sesión gratuita para entender tu negocio, tus metas y lo que te está frenando. Sin tecnicismos. Sin presión.',
+    title: 'Diagnóstico gratuito',
+    description: 'Agendamos una sesión sin costo para entender tu negocio, tus metas y lo que te está frenando. Sin tecnicismos. Sin presión.',
   },
   {
     step: 2,
-    title: 'Diseñamos',
-    description: 'Armamos el plan exacto de lo que necesitas. Sin extras innecesarios, sin promesas infladas. Solo lo que genera resultado.',
+    title: 'Mapa de problemas',
+    description: 'Identificamos exactamente qué está bloqueando tu crecimiento: procesos manuales, ausencia digital, cuellos de botella. Todo visible sobre la mesa.',
   },
   {
     step: 3,
-    title: 'Ejecutamos',
-    description: 'Desarrollamos rápido y con comunicación constante. Sabes en qué estamos en todo momento. Sin desaparecer ni dilatar.',
+    title: 'Propuesta de solución',
+    description: 'Armamos el plan exacto con herramientas, tiempos y costos claros. Sin extras innecesarios, sin promesas infladas. Solo lo que genera resultado.',
   },
   {
     step: 4,
-    title: 'Medimos',
-    description: 'Entregamos resultados reales. Hacemos seguimiento a 30 y 60 días. Si algo hay que afinar, lo afinamos. Eso es lo que hace un aliado.',
+    title: 'Implementación',
+    description: 'Construimos rápido y con comunicación constante. Sabes en qué estamos en todo momento. Sin desaparecer ni dilatar.',
+  },
+  {
+    step: 5,
+    title: 'Seguimiento',
+    description: 'Hacemos seguimiento a 30 y 60 días. Medimos resultados reales y afinamos lo que sea necesario. Eso es lo que hace un aliado.',
   },
 ] as const;
 
