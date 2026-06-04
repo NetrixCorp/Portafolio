@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { NAVIGATION, CONTACT, SITE_CONFIG } from '@/lib/constants'
 import {
@@ -22,21 +23,16 @@ function NetrixLogo({ className }: { className?: string }) {
     <a
       href="/"
       aria-label="NETRIX — Ir al inicio"
-      className={cn('flex items-center gap-2.5 group', className)}
+      className={cn('flex items-center', className)}
     >
-      {/* Chip icon: concepto del logo (chip + $) */}
-      <div
-        className="w-7 h-7 border border-netrix-red rounded-sm flex items-center justify-center flex-shrink-0 group-hover:bg-netrix-red/10 transition-colors duration-200"
-        aria-hidden="true"
-      >
-        <span className="font-mono text-netrix-red text-sm font-bold leading-none">
-          $
-        </span>
-      </div>
-      {/* Wordmark */}
-      <span className="font-display text-xl tracking-[0.1em] text-white">
-        NETRIX
-      </span>
+      <Image
+        src="/logo-netrix.jpeg"
+        alt="NETRIX — Agencia de soluciones digitales, Bogotá"
+        width={1254}
+        height={1254}
+        className="h-8 sm:h-10 w-auto object-contain"
+        priority
+      />
     </a>
   )
 }

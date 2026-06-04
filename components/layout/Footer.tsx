@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Instagram, Linkedin, MessageCircle, Mail } from 'lucide-react'
 import { NAVIGATION, SOCIAL_LINKS, SITE_CONFIG, SERVICES } from '@/lib/constants'
 
@@ -10,19 +11,15 @@ function FooterLogo() {
     <a
       href="/"
       aria-label="NETRIX — Ir al inicio"
-      className="flex items-center gap-2 group w-fit"
+      className="flex items-center w-fit"
     >
-      <div
-        className="w-6 h-6 border border-netrix-red rounded-sm flex items-center justify-center flex-shrink-0 group-hover:bg-netrix-red/10 transition-colors duration-200"
-        aria-hidden="true"
-      >
-        <span className="font-mono text-netrix-red text-xs font-bold leading-none">
-          $
-        </span>
-      </div>
-      <span className="font-display text-lg tracking-[0.1em] text-white">
-        NETRIX
-      </span>
+      <Image
+        src="/logo-netrix.jpeg"
+        alt="NETRIX — Agencia de soluciones digitales, Bogotá"
+        width={1254}
+        height={1254}
+        className="h-7 sm:h-8 w-auto object-contain"
+      />
     </a>
   )
 }
