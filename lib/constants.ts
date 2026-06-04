@@ -27,13 +27,15 @@ export const COLORS = {
 // ============================================================
 
 export const HERO = {
-  tagline: 'Tu negocio merece una presencia que vende.',
-  headline: 'Hacemos que tu negocio se vea grande y venda más.',
-  subheadline: 'Automatizaciones, bots de WhatsApp, landing pages y software a medida. Todo lo que tu negocio necesita para crecer — sin tecnicismos, sin enredos.',
-  ctaPrimary: 'Agenda tu diagnóstico',
-  ctaSecondary: 'Ver nuestros proyectos',
-  ctaPrimaryLink: '#contact', // Scroll to contact
-  ctaSecondaryLink: '#portfolio', // Scroll to portfolio
+  tagline:          'Tu negocio merece una presencia que vende.',
+  headline:         'Hacemos que tu negocio se vea grande y venda más.',
+  subheadline:      'Soluciones digitales para PyMEs en Bogotá, Colombia',
+  description:      'Automatizaciones, bots de WhatsApp, landing pages y software a medida. Todo lo que tu negocio necesita para crecer — sin tecnicismos, sin enredos.',
+  servicesLine:     'Landing pages · Bots WhatsApp · Automatización · Software a medida',
+  ctaPrimary:       'Agenda tu diagnóstico',
+  ctaSecondary:     'Ver nuestros proyectos',
+  ctaPrimaryLink:   '#contact',
+  ctaSecondaryLink: '#portfolio',
 } as const;
 
 // ============================================================
