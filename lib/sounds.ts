@@ -10,7 +10,7 @@ export async function playButtonHover(): Promise<void> {
   if (typeof window === 'undefined') return
   try {
     const Tone = await import('tone')
-    await Tone.start()
+    if (Tone.context.state !== 'running') await Tone.start()
     if (!synthInstance) {
       const poly = new Tone.PolySynth(Tone.Synth).toDestination()
       poly.maxPolyphony = 1
