@@ -18,7 +18,7 @@ function FooterLogo() {
         alt="NETRIX — Agencia de soluciones digitales, Bogotá"
         width={1254}
         height={1254}
-        className="h-7 sm:h-8 w-auto object-contain"
+        className="h-7 sm:h-8 w-auto object-contain transition-opacity duration-200 hover:opacity-80"
       />
     </a>
   )

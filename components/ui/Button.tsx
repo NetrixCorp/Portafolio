@@ -1,8 +1,9 @@
 'use client'
 
 import { motion, useReducedMotion } from 'motion/react'
-import { forwardRef } from 'react'
+import { forwardRef, useCallback } from 'react'
 import { cn } from '@/lib/utils'
+import { playButtonHover } from '@/lib/sounds'
 
 // ============================================================
 // TIPOS
@@ -77,11 +78,21 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       disabled,
       href,
       external,
+      onMouseEnter: consumerMouseEnter,
       ...props
     },
     ref
   ) => {
     const prefersReduced = useReducedMotion()
+
+    // onMouseEnter fires once per entry — naturally plays sound only once per hover
+    const handleMouseEnter = useCallback(
+      (e: React.MouseEvent<HTMLElement>) => {
+        if (variant === 'primary' && !disabled) playButtonHover()
+        consumerMouseEnter?.(e as React.MouseEvent<HTMLButtonElement>)
+      },
+      [variant, disabled, consumerMouseEnter],
+    )
 
     const classes = cn(
       baseStyles,
@@ -107,6 +118,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           className={classes}
           target={external ? '_blank' : undefined}
           rel={external ? 'noopener noreferrer' : undefined}
+          onMouseEnter={handleMouseEnter}
           {...(props as React.ComponentProps<typeof motion.a>)}
           {...(motionProps as React.ComponentProps<typeof motion.a>)}
         >
@@ -120,6 +132,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={classes}
         disabled={disabled}
+        onMouseEnter={handleMouseEnter}
         {...(motionProps as React.ComponentProps<typeof motion.button>)}
         {...(props as React.ComponentProps<typeof motion.button>)}
       >

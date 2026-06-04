@@ -221,6 +221,7 @@ export function Hero() {
     <section
       aria-label="Hero NETRIX"
       className="bg-netrix-black min-h-[calc(100vh-72px)] flex items-center"
+      style={{ backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(255, 46, 46, 0.09) 0%, transparent 60%)' }}
     >
       <div className="container-netrix section-padding w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
