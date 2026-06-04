@@ -1,6 +1,7 @@
 import { Hero } from '@/components/sections/Hero'
 import { Servicios } from '@/components/sections/Servicios'
 import { Proceso } from '@/components/sections/Proceso'
+import { CasosDeExito } from '@/components/sections/CasosDeExito'
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Hero />
       <Servicios />
       <Proceso />
-      {/* <CasosDeExito /> */}
+      <CasosDeExito />
       {/* <PorQueNetrix /> */}
       {/* <SobreNosotros /> */}
       {/* <Contacto /> */}

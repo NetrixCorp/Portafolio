@@ -232,27 +232,40 @@ export const META = {
 } as const;
 
 // ============================================================
-// CASOS DE ÉXITO (ESTRUCTURA)
-// Para llenar con datos reales
+// CASOS DE ÉXITO
 // ============================================================
 
 export const CASE_STUDIES = [
   {
-    id: 'case-1',
-    industry: 'Restaurante',
-    city: 'Bogotá',
-    problem: 'Perdía 60% de consultas por WhatsApp fuera de horario',
-    solution: 'Bot WhatsApp con menú interactivo + reservas automáticas',
-    solutionTime: '14 días',
-    result: '0 consultas sin respuesta',
-    resultMetric: '+28% pedidos',
-    resultTime: '45 días',
-    testimonial: '"Ahora duermo tranquilo"',
-    clientName: 'Jorge Morales',
-    clientRole: 'Dueño',
-    image: '/images/case-1.jpg',
+    id: 'pos-casa-kumis',
+    title: 'POS Casa del Kumis',
+    category: 'Software a Medida',
+    problem: 'Dependencia de software externo con costos crecientes y sin adaptación a las 18 sucursales propias de la cadena.',
+    solution: 'Sistema POS propio con gestión de turnos, inventario por sede, cierre de caja automático y pagos integrados con Credinbanco.',
+    result: '18 sucursales en producción desde el primer día',
+    icon: 'Monitor',
+    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Credinbanco API'],
   },
-  // Agregar 2-3 más cuando tengas datos reales
+  {
+    id: 'punteo-bancario',
+    title: 'Software de Punteo',
+    category: 'Automatización',
+    problem: 'El cruce manual de vouchers físicos, extractos bancarios y reportes Redeban consumía horas diarias y dejaba errores sin detectar.',
+    solution: 'Pipeline automático con OCR que cruza tres fuentes de datos, clasifica diferencias por categoría y genera reportes auditables exportables.',
+    result: 'Proceso reducido de horas a minutos',
+    icon: 'GitMerge',
+    tags: ['React', 'NestJS', 'OCR', 'PostgreSQL'],
+  },
+  {
+    id: 'web-casa-kumis',
+    title: 'Casa del Kumis — Web',
+    category: 'Landing Page',
+    problem: 'La empresa no aparecía en búsquedas locales y carecía de presencia digital que generara confianza en nuevos clientes.',
+    solution: 'Sitio responsive con SEO técnico optimizado, catálogo de productos estructurado y carga rápida pensada para búsquedas locales.',
+    result: 'Presencia digital activa con mejor rendimiento mobile',
+    icon: 'Globe',
+    tags: ['HTML', 'CSS', 'JavaScript', 'SEO'],
+  },
 ] as const;
 
 // ============================================================
