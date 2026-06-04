@@ -62,13 +62,13 @@ function HeroHeadline({ prefersReduced }: ReducedMotionProp) {
       </motion.span>
       <motion.span
         className="block text-netrix-red text-[52px] lg:text-[80px]"
-        {...lineMotion(heroSequence.headline2.delay)}
+        {...lineMotion(heroSequence.headlineRed.delay)}
       >
         grande
       </motion.span>
       <motion.span
         className="block text-white text-[52px] lg:text-[80px]"
-        {...lineMotion(heroSequence.headlineRed.delay)}
+        {...lineMotion(heroSequence.headline3.delay)}
       >
         {after.trim().replace(/\.$/, '')}.
       </motion.span>
@@ -226,7 +226,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* ── Left column: copy + CTAs ───────────────────── */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:max-w-[600px] md:mx-auto lg:max-w-none lg:mx-0">
             <HeroBadge prefersReduced={prefersReduced} />
 
             <HeroHeadline prefersReduced={prefersReduced} />

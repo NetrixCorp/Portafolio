@@ -194,8 +194,8 @@ export const lineGrowVertical: Variants = {
 export const heroSequence = {
   badge:       { delay: 0 },
   headline1:   { delay: 0.1 },
-  headline2:   { delay: 0.2 },
-  headlineRed: { delay: 0.3 },
+  headlineRed: { delay: 0.2 },
+  headline3:   { delay: 0.3 },
   subheadline: { delay: 0.4 },
   services:    { delay: 0.5 },
   ctas:        { delay: 0.6 },
