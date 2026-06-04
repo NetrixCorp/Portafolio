@@ -90,19 +90,30 @@ export function Servicios() {
         </motion.div>
 
         {/* ── Grid de cards ────────────────────────────────── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {SERVICES.map((service, index) => {
+        {/* motion.div orquesta el stagger desde un solo trigger de viewport.
+            Los cards heredan initial/animate y responden a staggerChildren. */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: prefersReduced ? 0 : 0.08,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
+          {SERVICES.map((service) => {
             const Icon = ICON_MAP[service.icon]
-            const delay = prefersReduced ? 0 : index * 0.08
+            if (!Icon) return null   // Issue #1: guard contra íconos no importados
 
             return (
               <motion.article
                 key={service.id}
-                initial="hidden"
-                whileInView="visible"
-                viewport={viewport}
-                variants={fadeUp}
-                transition={{ delay, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                variants={fadeUp}   // Issue #3: fadeUp maneja duration y ease
                 whileHover={
                   prefersReduced
                     ? undefined
@@ -134,7 +145,7 @@ export function Servicios() {
               </motion.article>
             )
           })}
-        </div>
+        </motion.div>
 
       </div>
     </section>
