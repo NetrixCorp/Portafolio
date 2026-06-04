@@ -88,10 +88,11 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     // onMouseEnter fires once per entry — naturally plays sound only once per hover
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLElement>) => {
+        if (prefersReduced) return
         if (variant === 'primary' && !disabled) playButtonHover()
         consumerMouseEnter?.(e as React.MouseEvent<HTMLButtonElement>)
       },
-      [variant, disabled, consumerMouseEnter],
+      [prefersReduced, variant, disabled, consumerMouseEnter],
     )
 
     const classes = cn(

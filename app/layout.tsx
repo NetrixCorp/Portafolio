@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Bebas_Neue, Montserrat, Inter, JetBrains_Mono } from 'next/font/google'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { AudioInit } from '@/components/ui/AudioInit'
 import '@/styles/globals.css'
 
 // ============================================================
@@ -197,6 +198,7 @@ export default function RootLayout({
         >
           Saltar al contenido principal
         </a>
+        <AudioInit />
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />
