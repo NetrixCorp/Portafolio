@@ -62,13 +62,13 @@ function HeroHeadline({ prefersReduced }: ReducedMotionProp) {
       </motion.span>
       <motion.span
         className="block text-netrix-red text-[52px] lg:text-[80px]"
-        {...lineMotion(heroSequence.headlineRed.delay)}
+        {...lineMotion(heroSequence.headline2.delay)}
       >
         grande
       </motion.span>
       <motion.span
         className="block text-white text-[52px] lg:text-[80px]"
-        {...lineMotion(heroSequence.headline2.delay)}
+        {...lineMotion(heroSequence.headlineRed.delay)}
       >
         {after.trim().replace(/\.$/, '')}.
       </motion.span>
@@ -99,17 +99,19 @@ function PipelineVisual({ prefersReduced }: ReducedMotionProp) {
       return
     }
 
-    const ts: ReturnType<typeof setTimeout>[] = []
+    let t1: ReturnType<typeof setTimeout>
+    let t2: ReturnType<typeof setTimeout>
+    let t3: ReturnType<typeof setTimeout>
 
     function cycle() {
       setStep(0)
-      ts.push(setTimeout(() => setStep(1), 1300))
-      ts.push(setTimeout(() => setStep(2), 2600))
-      ts.push(setTimeout(cycle,            3800))
+      t1 = setTimeout(() => setStep(1), 1300)
+      t2 = setTimeout(() => setStep(2), 2600)
+      t3 = setTimeout(cycle,            3800)
     }
 
     cycle()
-    return () => ts.forEach(clearTimeout)
+    return () => { clearTimeout(t1); clearTimeout(t2); clearTimeout(t3) }
   }, [prefersReduced])
 
   return (
@@ -163,7 +165,7 @@ function PipelineVisual({ prefersReduced }: ReducedMotionProp) {
                 <span
                   className={[
                     'w-2 h-2 rounded-full transition-colors duration-300',
-                    isActive ? 'bg-green-500' : 'bg-netrix-gray-dark',
+                    isActive ? 'bg-white' : 'bg-netrix-gray-dark',
                   ].join(' ')}
                   aria-hidden="true"
                 />
@@ -178,7 +180,7 @@ function PipelineVisual({ prefersReduced }: ReducedMotionProp) {
                     transition={
                       step === 0
                         ? { duration: 0.05 }
-                        : { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+                        : { duration: 0.8, ease }
                     }
                   />
                 </div>
@@ -237,7 +239,7 @@ export function Hero() {
               <p className="font-body text-base lg:text-lg text-netrix-gray">
                 {HERO.subheadline}
               </p>
-              <p className="font-body text-sm text-netrix-gray leading-relaxed">
+              <p className="font-body text-base text-netrix-gray leading-relaxed">
                 {HERO.description}
               </p>
             </motion.div>
