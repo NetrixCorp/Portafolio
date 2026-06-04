@@ -11,7 +11,7 @@ import { fadeUp, lineGrow, viewport } from '@/lib/animations'
 const SECTION = {
   label:    'PROCESO',
   title:    'Primero entendemos el caos. Luego diseñamos el control.',
-  subtitle: 'Cuatro pasos claros. Sin rodeos, sin sorpresas, sin desaparecer.',
+  subtitle: 'Cinco pasos claros. Sin rodeos, sin sorpresas, sin desaparecer.',
 }
 
 // ============================================================
@@ -86,7 +86,7 @@ export function Proceso() {
 
           {/* Grid de pasos */}
           <motion.div
-            className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-6"
+            className="relative grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-6"
             variants={{
               hidden: {},
               visible: { transition: { staggerChildren: prefersReduced ? 0 : 0.12 } },
