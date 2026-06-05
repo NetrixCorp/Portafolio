@@ -199,7 +199,8 @@ export const NAVIGATION = [
   { label: 'Servicios',      href: '#services',        id: 'services' },
   { label: 'Proceso',        href: '#process',          id: 'process' },
   { label: 'Portafolio',     href: '#casos-de-exito',   id: 'portfolio' },
-  { label: 'Sobre nosotros', href: '#about',            id: 'about' },
+  { label: 'Por qué NETRIX', href: '#why-netrix',        id: 'why-netrix' },
+  { label: 'Sobre nosotros', href: '#about',             id: 'about' },
   { label: 'Contacto',       href: '#contact',          id: 'contact' },
 ] as const;
 

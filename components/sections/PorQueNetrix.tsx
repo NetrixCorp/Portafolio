@@ -40,7 +40,7 @@ export function PorQueNetrix() {
       className="bg-netrix-black section-padding"
       style={{
         backgroundImage:
-          'radial-gradient(ellipse at 50% 0%, rgba(255, 46, 46, 0.08) 0%, transparent 55%)',
+          'radial-gradient(ellipse at 50% 100%, rgba(255, 46, 46, 0.08) 0%, transparent 55%)',
       }}
     >
       <div className="container-netrix">
@@ -122,12 +122,12 @@ export function PorQueNetrix() {
                 <Icon
                   size={48}
                   strokeWidth={1.25}
-                  className="text-netrix-red flex-shrink-0"
+                  className="text-white flex-shrink-0"
                   aria-hidden="true"
                 />
 
                 {/* Tagline */}
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-netrix-red -mt-1">
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-netrix-gray -mt-1">
                   {diff.tagline}
                 </span>
 
