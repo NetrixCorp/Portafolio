@@ -199,7 +199,7 @@ export const CONTACT = {
   subheadline:      'Agenda una sesión gratuita. Sin compromiso.',
   ctaButton:        'Iniciar por WhatsApp',
   ctaLink:          `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(WA_MESSAGE)}`,
-  email:            'hola@netrix.com.co',
+  email:            'netrixcorporation@gmail.com',
   phone:            '+57 317 278 5407',
   responseTime:     'Respondemos en menos de 1 hora.',
 } as const
@@ -332,9 +332,9 @@ export const DIFFERENTIATORS = [
 
 export const SOCIAL_LINKS = {
   whatsapp:  `https://wa.me/${WA_PHONE}`,
-  instagram: 'https://instagram.com/netrixcorp',
-  linkedin:  'https://linkedin.com/company/netrix-corp',
-  email:     'hola@netrix.com.co',
+  instagram: 'https://www.instagram.com/netrix_col/',
+  linkedin:  'https://www.linkedin.com/company/netrixcol/',
+  email:     'netrixcorporation@gmail.com',
 } as const
 
 // ============================================================

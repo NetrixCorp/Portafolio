@@ -5,6 +5,7 @@ import { Code2, TrendingUp, MessageCircle } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { TEAM, ABOUT, CONTACT } from '@/lib/constants'
 import { fadeUp, fadeLeft, fadeRight, viewport } from '@/lib/animations'
+import { playButtonHover } from '@/lib/sounds'
 
 // ============================================================
 // ICON MAP
@@ -204,6 +205,7 @@ export function SobreNosotros() {
             href={CONTACT.ctaLink}
             target="_blank"
             rel="noopener noreferrer"
+            onMouseEnter={() => { if (!prefersReduced) void playButtonHover() }}
             className="inline-flex items-center gap-3 bg-netrix-red text-white font-heading font-bold text-[15px] px-8 py-4 rounded-md transition-colors duration-200 hover:bg-[#CC0000]"
           >
             <MessageCircle size={18} aria-hidden="true" />
