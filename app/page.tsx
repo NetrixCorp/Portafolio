@@ -3,6 +3,7 @@ import { Servicios } from '@/components/sections/Servicios'
 import { Proceso } from '@/components/sections/Proceso'
 import { CasosDeExito } from '@/components/sections/CasosDeExito'
 import { PorQueNetrix } from '@/components/sections/PorQueNetrix'
+import { SobreNosotros } from '@/components/sections/SobreNosotros'
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <Proceso />
       <CasosDeExito />
       <PorQueNetrix />
-      {/* <SobreNosotros /> */}
+      <SobreNosotros />
       {/* <Contacto /> */}
     </>
   )

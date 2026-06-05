@@ -143,25 +143,37 @@ export const PROCESS = [
 // ============================================================
 
 export const ABOUT = {
+  sectionLabel:    'SOBRE NOSOTROS',
+  sectionTitle:    'Dos personas. Una misión.',
+  sectionSubtitle: 'No somos proveedores. Somos el equipo digital de tu negocio.',
+
   intro: 'NETRIX nació de una conversación entre dos amigos que veían lo mismo en todos lados: negocios buenos, con productos reales, perdiendo clientes frente a competidores que simplemente se veían más grandes en internet.\n\nNo porque fueran mejores. Sino porque tenían una página web que inspiraba confianza, respondían por WhatsApp en segundos y aparecían primero en Google. Eso era todo. Y eso marcaba la diferencia.',
-  
-  founders: [
-    {
-      name: 'Monkey',
-      title: 'Arquitecto Técnico',
-      bio: 'Desarrollador backend con obsesión por los detalles, lidera el diseño y construcción de cada solución: desde el bot de WhatsApp que responde a las 2am hasta la automatización que conecta inventario con factura sin que nadie la toque. Cuando dice que algo va a funcionar, es porque ya lo probó.',
-      icon: 'Code',
-    },
-    {
-      name: 'Polo',
-      title: 'Estratega Comercial',
-      bio: 'Estratega comercial con años conectando marcas con las personas correctas, lidera la conversación con cada cliente: entiende el negocio, traduce las necesidades en soluciones concretas y se asegura de que el resultado final no sea solo bonito sino efectivo.',
-      icon: 'Target',
-    },
-  ],
-  
+
   closing: 'Juntos cubrimos lo que pocas agencias pueden cubrir: el que construye y el que comunica, en la misma mesa desde el día uno. Sin intermediarios, sin teléfono dañado, sin versiones del cliente que se pierden en el camino.\n\nNETRIX no es una agencia grande. Es un equipo pequeño con estándares altos, comprometido con negocios que merecen crecer. Si tu negocio es de esos, hay mucho por hacer juntos.',
-} as const;
+} as const
+
+// ============================================================
+// TEAM
+// ============================================================
+
+export const TEAM = [
+  {
+    id:          'diego',
+    name:        'Diego Alejandro Medina',
+    role:        'Co-fundador & Tech Lead',
+    description: 'Backend, infraestructura, testing, deploy. Obsesionado con código limpio y sistemas escalables.',
+    icon:        'Code2',
+    specialty:   'Ingeniero de Software',
+  },
+  {
+    id:          'pablo',
+    name:        'Juan Pablo Monroy',
+    role:        'Co-fundador & Growth Lead',
+    description: 'Marketing, ventas, estrategia. Ve el negocio del cliente antes de verlo el cliente mismo.',
+    icon:        'TrendingUp',
+    specialty:   'Growth & Marketing',
+  },
+] as const
 
 // ============================================================
 // PILARES DE MENSAJERÍA (Consistencia)
@@ -350,6 +362,7 @@ export default {
   PROCESS,
   DIFFERENTIATORS,
   ABOUT,
+  TEAM,
   MESSAGING_PILLARS,
   CONTACT,
   NAVIGATION,
