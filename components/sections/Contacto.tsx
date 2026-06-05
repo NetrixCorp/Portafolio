@@ -129,7 +129,7 @@ export function Contacto() {
             href={CONTACT.ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => { if (!prefersReduced) void playButtonHover() }}
+            onMouseEnter={prefersReduced ? undefined : () => void playButtonHover()}
             whileHover={
               prefersReduced
                 ? undefined

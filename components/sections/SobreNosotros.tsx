@@ -205,7 +205,7 @@ export function SobreNosotros() {
             href={CONTACT.ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={() => { if (!prefersReduced) void playButtonHover() }}
+            onMouseEnter={prefersReduced ? undefined : () => void playButtonHover()}
             className="inline-flex items-center gap-3 bg-netrix-red text-white font-heading font-bold text-[15px] px-8 py-4 rounded-md transition-colors duration-200 hover:bg-[#CC0000]"
           >
             <MessageCircle size={18} aria-hidden="true" />

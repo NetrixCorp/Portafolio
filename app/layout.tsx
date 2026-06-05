@@ -134,8 +134,8 @@ const jsonLd = {
       foundingDate: '2025',
       areaServed: { '@type': 'City', name: 'Bogotá' },
       sameAs: [
-        'https://instagram.com/netrixcorp',
-        'https://linkedin.com/company/netrix-corp',
+        'https://www.instagram.com/netrix_col/',
+        'https://www.linkedin.com/company/netrixcol/',
       ],
     },
     {

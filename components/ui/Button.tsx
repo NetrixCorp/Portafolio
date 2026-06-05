@@ -89,7 +89,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const handleMouseEnter = useCallback(
       (e: React.MouseEvent<HTMLElement>) => {
         if (prefersReduced) return
-        if (variant === 'primary' && !disabled) playButtonHover()
+        if (variant === 'primary' && !disabled) void playButtonHover()
         consumerMouseEnter?.(e as React.MouseEvent<HTMLButtonElement>)
       },
       [prefersReduced, variant, disabled, consumerMouseEnter],
