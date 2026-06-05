@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from 'motion/react'
 import Link from 'next/link'
 import { Monitor, GitMerge, Globe, ArrowLeft, ExternalLink, Clock, Tag } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { CASE_STUDIES, SOCIAL_LINKS } from '@/lib/constants'
+import { CASE_STUDIES, CONTACT } from '@/lib/constants'
 import { fadeUp, scaleIn, viewport } from '@/lib/animations'
 
 // ============================================================
@@ -318,7 +318,7 @@ export function CaseDetail({ caso }: { caso: CaseStudy }) {
 
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <a
-              href={SOCIAL_LINKS.whatsapp}
+              href={CONTACT.ctaLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-heading font-bold text-[14px] text-white bg-netrix-red hover:bg-[#CC0000] px-6 py-3 rounded transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-netrix-red focus-visible:ring-offset-2 focus-visible:ring-offset-netrix-black"
