@@ -191,17 +191,20 @@ export const MESSAGING_PILLARS = {
 // CONTACTO / CTA FINAL
 // ============================================================
 
+const WA_PHONE   = '573172785407'
+const WA_MESSAGE = 'Hola, quiero conocer más sobre NETRIX. Estoy interesado en una solución digital para mi negocio'
+
 export const CONTACT = {
-  headline: 'Listo para crecer tu negocio?',
-  subheadline: 'Agenda una sesión gratuita. Sin compromiso.',
-  ctaButton: 'Iniciar por WhatsApp',
-  ctaLink: 'https://wa.me/57XXXXXXXXX?text=Hola%20NETRIX%2C%20me%20gustaría%20agendar%20una%20sesión%20gratuita.',
-  
-  // Para formulario alternativo
-  email: 'hola@netrix.com.co',
-  phone: '+57 XXX XXX XXXX',
-  responseTime: 'Respondemos en menos de 1 hora.',
-} as const;
+  headline:         '¿Listo para crecer tu negocio?',
+  subheadline:      'Agenda una sesión gratuita. Sin compromiso.',
+  ctaButton:        'Iniciar por WhatsApp',
+  whatsappPhone:    WA_PHONE,
+  whatsappMessage:  WA_MESSAGE,
+  ctaLink:          `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(WA_MESSAGE)}`,
+  email:            'hola@netrix.com.co',
+  phone:            '+57 317 278 5407',
+  responseTime:     'Respondemos en menos de 1 hora.',
+} as const
 
 // ============================================================
 // NAVEGACIÓN
@@ -330,11 +333,11 @@ export const DIFFERENTIATORS = [
 // ============================================================
 
 export const SOCIAL_LINKS = {
-  whatsapp: 'https://wa.me/57XXXXXXXXX',
+  whatsapp:  `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(WA_MESSAGE)}`,
   instagram: 'https://instagram.com/netrixcorp',
-  linkedin: 'https://linkedin.com/company/netrix-corp',
-  email: 'hola@netrix.com.co',
-} as const;
+  linkedin:  'https://linkedin.com/company/netrix-corp',
+  email:     'hola@netrix.com.co',
+} as const
 
 // ============================================================
 // CONFIGURACIÓN DEL SITIO

@@ -128,7 +128,7 @@ export function SobreNosotros() {
                           transition: { duration: 0.2, ease: 'easeOut' },
                         }
                   }
-                  className="relative flex-shrink-0 rounded-lg overflow-hidden bg-netrix-card border border-netrix-border w-[220px] h-[220px] md:w-full md:h-[220px] lg:w-[320px] lg:h-[320px]"
+                  className="relative flex-shrink-0 rounded-lg overflow-hidden bg-netrix-card border border-netrix-border w-[220px] h-[220px] md:w-[220px] md:h-[220px] lg:w-[320px] lg:h-[320px]"
                   style={{ borderTop: '2px solid #FF2E2E' }}
                   aria-label={`Foto de ${member.name}`}
                 >
