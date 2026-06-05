@@ -16,12 +16,11 @@ export function generateStaticParams() {
 // ============================================================
 
 type Props = {
-  params: Promise<{ id: string }>
+  params: { id: string }
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { id } = await params
-  const caso = CASE_STUDIES.find((c) => c.id === id)
+export function generateMetadata({ params }: Props): Metadata {
+  const caso = CASE_STUDIES.find((c) => c.id === params.id)
   if (!caso) return {}
 
   return {
@@ -39,9 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // PAGE
 // ============================================================
 
-export default async function CasoPage({ params }: Props) {
-  const { id } = await params
-  const caso = CASE_STUDIES.find((c) => c.id === id)
+export default function CasoPage({ params }: Props) {
+  const caso = CASE_STUDIES.find((c) => c.id === params.id)
   if (!caso) notFound()
 
   return <CaseDetail caso={caso} />
