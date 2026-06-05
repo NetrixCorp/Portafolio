@@ -120,7 +120,7 @@ export function Navbar() {
           <NetrixLogo />
 
           {/* Links — desktop */}
-          <ul className="hidden md:flex items-center gap-8" role="list">
+          <ul className="hidden lg:flex items-center gap-8" role="list">
             {NAVIGATION.map((item) => (
               <li key={item.id}>
                 <NavLink href={item.href} label={item.label} />
@@ -129,7 +129,7 @@ export function Navbar() {
           </ul>
 
           {/* CTA — desktop */}
-          <div className="hidden md:flex">
+          <div className="hidden lg:flex">
             <Button
               href={CONTACT.ctaLink}
               external
@@ -144,7 +144,7 @@ export function Navbar() {
           {/* Hamburger — mobile */}
           <button
             className={cn(
-              'md:hidden p-2 rounded-sm -mr-2',
+              'lg:hidden p-2 rounded-sm -mr-2',
               'text-netrix-gray hover:text-white',
               'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-netrix-red',
               'transition-colors duration-200'
@@ -166,7 +166,7 @@ export function Navbar() {
             {/* Overlay — key requerido para que AnimatePresence coordine exit */}
             <motion.div
               key="netrix-menu-overlay"
-              className="fixed inset-0 z-40 bg-black/60 md:hidden"
+              className="fixed inset-0 z-40 bg-black/60 lg:hidden"
               variants={mobileMenuOverlay}
               initial="hidden"
               animate="visible"
@@ -184,7 +184,7 @@ export function Navbar() {
               aria-modal="true"
               aria-label="Menú de navegación"
               className={cn(
-                'fixed top-0 right-0 bottom-0 z-50 md:hidden',
+                'fixed top-0 right-0 bottom-0 z-50 lg:hidden',
                 'w-[280px] bg-netrix-black border-l border-netrix-border',
                 'flex flex-col pt-20 pb-8 px-6'
               )}

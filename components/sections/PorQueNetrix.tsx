@@ -107,7 +107,7 @@ export function PorQueNetrix() {
                         transition: { duration: 0.2, ease: 'easeOut' },
                       }
                 }
-                className="relative bg-netrix-card border border-netrix-border rounded-lg p-6 flex flex-col gap-4 overflow-hidden hover:border-netrix-red transition-colors duration-200"
+                className="relative bg-netrix-card border border-netrix-border rounded-lg p-6 flex flex-col gap-4 overflow-hidden transition-colors duration-200"
                 style={{ borderTop: '2px solid #FF2E2E' }}
               >
                 {/* Número de fondo */}
