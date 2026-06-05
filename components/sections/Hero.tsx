@@ -220,7 +220,7 @@ export function Hero() {
   return (
     <section
       aria-label="Hero NETRIX"
-      className="bg-netrix-black min-h-[calc(100vh-72px)] flex items-center"
+      className="bg-netrix-black min-h-[calc(100vh-64px)] lg:min-h-[calc(100vh-72px)] flex items-center"
       style={{ backgroundImage: 'radial-gradient(ellipse at 50% 0%, rgba(255, 46, 46, 0.09) 0%, transparent 60%)' }}
     >
       <div className="container-netrix section-padding w-full">

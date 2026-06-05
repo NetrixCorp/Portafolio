@@ -97,6 +97,16 @@ export function Navbar() {
     return () => window.removeEventListener('keydown', handleKey)
   }, [isMobileOpen])
 
+  // Cerrar mobile menu al cruzar el breakpoint lg hacia arriba
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const handler = (e: MediaQueryListEvent) => {
+      if (e.matches) setIsMobileOpen(false)
+    }
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
   const closeMobile = () => setIsMobileOpen(false)
 
   return (
@@ -120,7 +130,7 @@ export function Navbar() {
           <NetrixLogo />
 
           {/* Links — desktop */}
-          <ul className="hidden lg:flex items-center gap-8" role="list">
+          <ul className="hidden lg:flex items-center gap-5 lg:gap-6 xl:gap-8" role="list">
             {NAVIGATION.map((item) => (
               <li key={item.id}>
                 <NavLink href={item.href} label={item.label} />
