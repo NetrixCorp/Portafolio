@@ -282,6 +282,37 @@ export const CASE_STUDIES = [
 ] as const;
 
 // ============================================================
+// DIFERENCIADORES (Por qué NETRIX)
+// ============================================================
+
+export const DIFFERENTIATORS = [
+  {
+    id:          'todo-en-uno',
+    icon:        'Layers',
+    title:       'Todo en uno',
+    tagline:     'Sin coordinar 4 proveedores',
+    description: 'Diseño, desarrollo, automatización, SEO y bots — bajo una sola relación de confianza. Sin intermediarios, sin teléfono dañado, sin versiones del cliente que se pierden en el camino.',
+    benefit:     'Un solo equipo para todo',
+  },
+  {
+    id:          'precios-visibles',
+    icon:        'Eye',
+    title:       'Precios visibles',
+    tagline:     'Sin cotizaciones eternas ni letras pequeñas',
+    description: 'Sabes exactamente cuánto cuesta antes de firmar. Sin extras que aparecen en la factura final, sin sorpresas, sin presupuestos que cambian cada semana.',
+    benefit:     'Precio claro desde el día uno',
+  },
+  {
+    id:          'seguimiento-real',
+    icon:        'TrendingUp',
+    title:       'Seguimiento real',
+    tagline:     'Métricas reales, no promesas vacías',
+    description: 'Hacemos seguimiento a 30, 60 y 90 días con KPIs claros y reportes concretos. Si algo hay que afinar, lo afinamos. Eso es lo que hace un aliado, no un proveedor.',
+    benefit:     'Resultados medibles a 30/60/90 días',
+  },
+] as const;
+
+// ============================================================
 // REDES SOCIALES / LINKS EXTERNOS
 // ============================================================
 
@@ -316,6 +347,7 @@ export default {
   VALUE_PROPOSITION,
   SERVICES,
   PROCESS,
+  DIFFERENTIATORS,
   ABOUT,
   MESSAGING_PILLARS,
   CONTACT,
