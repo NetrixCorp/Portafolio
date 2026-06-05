@@ -1,6 +1,7 @@
 'use client'
 
 import { motion, useReducedMotion } from 'motion/react'
+import Link from 'next/link'
 import { Monitor, GitMerge, Globe, ArrowRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { CASE_STUDIES } from '@/lib/constants'
@@ -35,7 +36,7 @@ export function CasosDeExito() {
 
   return (
     <section
-      id="portfolio"
+      id="casos-de-exito"
       aria-labelledby="portfolio-heading"
       className="bg-netrix-black section-padding"
       style={{
@@ -129,7 +130,7 @@ export function CasosDeExito() {
                   <Icon
                     size={48}
                     strokeWidth={1.25}
-                    className="relative text-netrix-red"
+                    className="relative text-white"
                   />
 
                   {/* Badge de categoría */}
@@ -186,14 +187,14 @@ export function CasosDeExito() {
                       ))}
                     </div>
 
-                    <button
-                      type="button"
+                    <Link
+                      href={`/casos/${caso.id}`}
                       className="inline-flex items-center gap-1.5 font-heading font-semibold text-[13px] text-white hover:text-netrix-red transition-colors duration-150 flex-shrink-0"
                       aria-label={`Ver caso completo: ${caso.title}`}
                     >
                       Ver caso
                       <ArrowRight size={14} aria-hidden="true" />
-                    </button>
+                    </Link>
                   </div>
 
                 </div>

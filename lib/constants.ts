@@ -35,7 +35,7 @@ export const HERO = {
   ctaPrimary:       'Agenda tu diagnóstico',
   ctaSecondary:     'Ver nuestros proyectos',
   ctaPrimaryLink:   '#contact',
-  ctaSecondaryLink: '#portfolio',
+  ctaSecondaryLink: '#casos-de-exito',
 } as const;
 
 // ============================================================
@@ -196,10 +196,11 @@ export const CONTACT = {
 // ============================================================
 
 export const NAVIGATION = [
-  { label: 'Servicios', href: '#services', id: 'services' },
-  { label: 'Proceso', href: '#process', id: 'process' },
-  { label: 'Sobre nosotros', href: '#about', id: 'about' },
-  { label: 'Contacto', href: '#contact', id: 'contact' },
+  { label: 'Servicios',      href: '#services',        id: 'services' },
+  { label: 'Proceso',        href: '#process',          id: 'process' },
+  { label: 'Portafolio',     href: '#casos-de-exito',   id: 'portfolio' },
+  { label: 'Sobre nosotros', href: '#about',            id: 'about' },
+  { label: 'Contacto',       href: '#contact',          id: 'contact' },
 ] as const;
 
 // ============================================================
@@ -245,6 +246,10 @@ export const CASE_STUDIES = [
     result: '18 sucursales en producción desde el primer día',
     icon: 'Monitor',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Credinbanco API'],
+    description: 'Casa del Kumis opera 18 sucursales en Bogotá con un volumen transaccional diario que ningún software de caja estándar toleraba sin colapsar o facturar una fortuna en licencias. El sistema anterior no reconocía su modelo de turnos partidos, no separaba inventario por sede y no integraba con Credinbanco, el operador de datáfonos que ya tenían desplegado. Construimos un POS propio desde cero: interfaz táctil optimizada para punto de venta, módulo de inventario multi-sede con traspasos entre sucursales, cierre de caja automático con cuadre por operario y una integración directa con la API de Credinbanco para conciliar pagos en tiempo real. El resultado fue un sistema que conoce su negocio mejor que cualquier solución genérica.',
+    impact: '18 sucursales en producción el primer día de lanzamiento, sin un solo incidente de caja en el primer mes operativo.',
+    technologies: ['Next.js', 'NestJS', 'PostgreSQL', 'Credinbanco API', 'Redis', 'Docker'],
+    timeline: '3 meses',
   },
   {
     id: 'punteo-bancario',
@@ -255,6 +260,10 @@ export const CASE_STUDIES = [
     result: 'Proceso reducido de horas a minutos',
     icon: 'GitMerge',
     tags: ['React', 'NestJS', 'OCR', 'PostgreSQL'],
+    description: 'El área contable cruzaba manualmente tres fuentes de datos cada día: vouchers físicos escaneados, extractos bancarios en PDF y reportes Redeban en Excel. El proceso tomaba entre 3 y 4 horas, el error humano era inevitable y los descuadres solo aparecían al final del día cuando ya era tarde para actuar. Construimos un pipeline de automatización que ingiere los tres archivos, aplica OCR sobre los vouchers, parsea los PDFs bancarios y normaliza los datos de Redeban. El motor de cruce identifica transacciones coincidentes, clasifica las diferencias por tipo —fecha, monto, referencia— y genera un reporte auditable listo para firma. Lo que antes era trabajo de toda una mañana se convirtió en un proceso de ocho minutos.',
+    impact: 'Reconciliación bancaria diaria reducida de 4 horas a menos de 10 minutos, con trazabilidad completa de cada diferencia detectada.',
+    technologies: ['React', 'NestJS', 'OCR', 'PostgreSQL', 'Python', 'ExcelJS'],
+    timeline: '6 semanas',
   },
   {
     id: 'web-casa-kumis',
@@ -265,6 +274,10 @@ export const CASE_STUDIES = [
     result: 'Presencia digital activa con mejor rendimiento mobile',
     icon: 'Globe',
     tags: ['HTML', 'CSS', 'JavaScript', 'SEO'],
+    description: 'Casa del Kumis lleva años siendo referente de productos lácteos en Bogotá, pero su presencia digital era inexistente: sin sitio web, sin Google Business Profile completo y sin aparecer en las primeras páginas de búsqueda para sus productos. Los clientes que los buscaban en internet no los encontraban y terminaban comprando en competidores con peor producto pero mejor posicionamiento. Construimos el sitio desde cero con arquitectura pensada para SEO local: carga inferior a 2 segundos, Schema.org para productos lácteos y negocio local, meta tags optimizados por barrio, catálogo estructurado con datos ricos para Google Shopping y diseño mobile-first para la audiencia objetivo.',
+    impact: 'Sitio indexado y visible en búsquedas locales dentro de los primeros 30 días, con carga mobile bajo 1.8 segundos.',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'SEO Técnico', 'Schema.org', 'Google Analytics 4'],
+    timeline: '2 semanas',
   },
 ] as const;
 

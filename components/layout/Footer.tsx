@@ -97,9 +97,9 @@ export function Footer() {
 
   const companyLinks = [
     { label: 'Sobre nosotros',   href: '#about' },
-    { label: 'Portafolio',       href: '#portfolio' },
+    { label: 'Portafolio',       href: '#casos-de-exito' },
     { label: 'Blog',             href: '/blog' },
-    { label: 'Casos de éxito',   href: '#cases' },
+    { label: 'Casos de éxito',   href: '#casos-de-exito' },
   ]
 
   const contactLinks = [
