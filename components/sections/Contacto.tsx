@@ -5,6 +5,7 @@ import { Mail, Phone, Linkedin, Instagram, MessageCircle } from 'lucide-react'
 import { CONTACT, SOCIAL_LINKS } from '@/lib/constants'
 import { fadeUp, viewport } from '@/lib/animations'
 import { playButtonHover } from '@/lib/sounds'
+import { trackEvent } from '@/lib/analytics'
 
 // ============================================================
 // WHATSAPP ICON
@@ -129,7 +130,7 @@ export function Contacto() {
             href={CONTACT.ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={prefersReduced ? undefined : () => void playButtonHover()}
+            onMouseEnter={prefersReduced ? undefined : () => { void playButtonHover(); trackEvent('whatsapp_click', { location: 'contacto' }) }}
             whileHover={
               prefersReduced
                 ? undefined

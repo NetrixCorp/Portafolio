@@ -1,9 +1,12 @@
 import type { Metadata, Viewport } from 'next'
 import { Bebas_Neue, Montserrat, Inter, JetBrains_Mono } from 'next/font/google'
+import Script from 'next/script'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { AudioInit } from '@/components/ui/AudioInit'
 import '@/styles/globals.css'
+
+export const GA_MEASUREMENT_ID = 'G-NZF2548ZRV'
 
 // ============================================================
 // FUENTES — next/font (cero layout shift, self-hosted)
@@ -203,6 +206,22 @@ export default function RootLayout({
         <main id="main-content">{children}</main>
         <Footer />
       </body>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `,
+        }}
+      />
     </html>
   )
 }

@@ -13,6 +13,7 @@ import {
   mobileMenuItem,
 } from '@/lib/animations'
 import { cn } from '@/lib/utils'
+import { trackEvent } from '@/lib/analytics'
 
 // ============================================================
 // LOGO
@@ -146,6 +147,7 @@ export function Navbar() {
               variant="primary"
               size="sm"
               aria-label="Agendar diagnóstico gratuito por WhatsApp"
+              onClick={() => trackEvent('cta_click', { location: 'navbar' })}
             >
               Agenda gratis
             </Button>
