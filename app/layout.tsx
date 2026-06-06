@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { AudioInit } from '@/components/ui/AudioInit'
-import { GA_MEASUREMENT_ID } from '@/lib/constants'
+import { GA_MEASUREMENT_ID, HOTJAR_SCRIPT_SRC } from '@/lib/constants'
 import '@/styles/globals.css'
 
 // ============================================================
@@ -223,7 +223,7 @@ export default function RootLayout({
       />
       <Script
         strategy="afterInteractive"
-        src="https://t.contentsquare.net/uxa/ee2812b71b213.js"
+        src={HOTJAR_SCRIPT_SRC}
       />
     </html>
   )

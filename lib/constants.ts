@@ -356,6 +356,7 @@ export const SITE_CONFIG = {
 // ============================================================
 
 export const GA_MEASUREMENT_ID = 'G-NZF2548ZRV'
+export const HOTJAR_SCRIPT_SRC = 'https://t.contentsquare.net/uxa/ee2812b71b213.js'
 
 // ============================================================
 // EXPORT DEFAULT
