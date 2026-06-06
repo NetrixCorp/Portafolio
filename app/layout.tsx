@@ -221,6 +221,10 @@ export default function RootLayout({
           `,
         }}
       />
+      <Script
+        strategy="afterInteractive"
+        src="https://t.contentsquare.net/uxa/ee2812b71b213.js"
+      />
     </html>
   )
 }
