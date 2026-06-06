@@ -352,6 +352,12 @@ export const SITE_CONFIG = {
 } as const;
 
 // ============================================================
+// ANALYTICS
+// ============================================================
+
+export const GA_MEASUREMENT_ID = 'G-NZF2548ZRV'
+
+// ============================================================
 // EXPORT DEFAULT
 // ============================================================
 
@@ -372,4 +378,5 @@ export default {
   CASE_STUDIES,
   SOCIAL_LINKS,
   SITE_CONFIG,
+  GA_MEASUREMENT_ID,
 };

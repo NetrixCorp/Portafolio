@@ -130,7 +130,8 @@ export function Contacto() {
             href={CONTACT.ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={prefersReduced ? undefined : () => { void playButtonHover(); trackEvent('whatsapp_click', { location: 'contacto' }) }}
+            onMouseEnter={() => { if (!prefersReduced) void playButtonHover() }}
+            onClick={() => trackEvent('whatsapp_click', { location: 'contacto' })}
             whileHover={
               prefersReduced
                 ? undefined

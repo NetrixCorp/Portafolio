@@ -206,7 +206,8 @@ export function SobreNosotros() {
             href={CONTACT.ctaLink}
             target="_blank"
             rel="noopener noreferrer"
-            onMouseEnter={prefersReduced ? undefined : () => { void playButtonHover(); trackEvent('whatsapp_click', { location: 'sobre_nosotros' }) }}
+            onMouseEnter={() => { if (!prefersReduced) void playButtonHover() }}
+            onClick={() => trackEvent('whatsapp_click', { location: 'sobre_nosotros' })}
             className="inline-flex items-center gap-3 bg-netrix-red text-white font-heading font-bold text-[15px] px-8 py-4 rounded-md transition-colors duration-200 hover:bg-[#CC0000]"
           >
             <MessageCircle size={18} aria-hidden="true" />

@@ -4,9 +4,8 @@ import Script from 'next/script'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { AudioInit } from '@/components/ui/AudioInit'
+import { GA_MEASUREMENT_ID } from '@/lib/constants'
 import '@/styles/globals.css'
-
-export const GA_MEASUREMENT_ID = 'G-NZF2548ZRV'
 
 // ============================================================
 // FUENTES — next/font (cero layout shift, self-hosted)
