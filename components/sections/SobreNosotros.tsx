@@ -208,7 +208,8 @@ export function SobreNosotros() {
             rel="noopener noreferrer"
             onMouseEnter={() => { if (!prefersReduced) void playButtonHover() }}
             onClick={() => trackEvent('whatsapp_click', { location: 'sobre_nosotros' })}
-            className="inline-flex items-center gap-3 bg-netrix-red text-white font-heading font-bold text-[15px] px-8 py-4 rounded-md transition-colors duration-200 hover:bg-[#CC0000]"
+            aria-label="Iniciar conversación por WhatsApp con NETRIX"
+            className="inline-flex items-center gap-3 bg-netrix-red text-white font-heading font-bold text-[15px] px-8 py-4 rounded-md transition-colors duration-200 hover:bg-[#CC0000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-netrix-red focus-visible:ring-offset-2 focus-visible:ring-offset-netrix-black"
           >
             <MessageCircle size={18} aria-hidden="true" />
             Vamos a arreglarlo juntos

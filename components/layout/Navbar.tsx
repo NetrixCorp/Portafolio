@@ -258,6 +258,7 @@ export function Navbar() {
                   variant="primary"
                   fullWidth
                   aria-label="Agendar diagnóstico gratuito por WhatsApp"
+                  onClick={() => trackEvent('cta_click', { location: 'navbar_mobile' })}
                 >
                   {CONTACT.ctaButton}
                 </Button>
